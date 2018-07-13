@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+body, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+ul.chat-users-wrapper {
+  list-style: none;
+}
+
+.chat-users-wrapper {
+  height: 250px;
+  width: 360px;
+  /* オーバーした要素範囲についてy軸(タテ)にスクロール */
+  overflow-y: scroll;
+  border: 1px solid #F4F4F4;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-user-wrapper {
+  padding: 10px;
+  border-bottom: 1px solid #F4F4F4;
+  min-height: 75px;
+  display: flex;
+  flex-direction: row;
+}
+
+.chat-user-wrapper.is-active {
+  background-color: #F4F4F4;
+}
+
+.chat-user-avatar {
+  margin-right: 15px;
+}
+
+/* border-radiusで丸化*/
+.chat-user-avatar img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.last-chat-time, .last-chat-message {
+  font-size: 0.9em;
+  color: #9E9F9F;
+}
+
+/* upper(「ジェーン」「○○分前」にはflex:row;を適用して横に…) */
+/* last-chat-message(チャット文)は何か指定せずともブロック要素なので下にでる */
+.chat-user-main-upper{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+}
+
+/* 含まれてるdiv(upperとlast-chato-message)”を”column(タテに並列) */
+.chat-user-main{
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 65px);
+  }
+
+/*　normal, clipその他値あとで調べる　*/
+.last-chat-message {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  }

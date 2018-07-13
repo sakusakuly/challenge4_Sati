@@ -1,0 +1,31 @@
+.container {
+  flex-direction: column; /* row; column; row-reverse; column-reverse; */
+  justify-content: /* flex-start; flex-end; space-between;
+                      center; space-around; space-evenly; */
+  flex-wrap: /* wrap; wrap-reverse; no-wrap; */
+  align-items: /* flex-start; flex-end; strech; center; baseline; */
+  align-content: /* flex-start; flex-end; strech;
+                      center; space-between; space-around; */
+}
+
+.box {
+  display: inline-block;
+  background-color: red;
+  height: 200px;
+  width: 200px;
+}
+
+.box box-2 {
+  display: inline-block;
+  background-color: green;
+  margin
+  height: 200px;
+  width: 200px;
+}
+
+.box box-3 {
+  display: inline-block;
+  background-color: blue;
+  height: 200px;
+  width: 200px;
+}
